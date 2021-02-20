@@ -4,18 +4,14 @@ var myMap = L.map("mapid", {
   zoom: 3
 });
 
-L.tileLayer(
-  "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
-  {
-    attribution:
-      "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
     maxZoom: 18,
     zoomOffset: -1,
-    id: "mapbox/light-v10",
+    id: "mapbox/streets-v11",
     accessToken: API_KEY
-  }
-).addTo(myMap);
+}).addTo(myMap);
 
 // get earthquake data
 
@@ -82,7 +78,9 @@ function getRadius(magnitude) {
   }
   return magnitude * 4;
 }
- 
+
+
+d3.json(queryUrl, function(data) {
 L.geoJson(data, {
   // We turn each feature into a circleMarker on the map.
   pointToLayer: function(feature, latlng) {
@@ -101,4 +99,28 @@ L.geoJson(data, {
         + feature.properties.place
     );
   }
-}).addTo(map);
+}).addTo(myMap);
+
+});
+
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function () {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+    limits = [0, 10, 30, 50, 70, 90],
+    colors= getColor(limits);
+    // var colors = ["#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"];
+    labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < limits.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(limits[i] + 1) + '"></i> ' +
+            limits[i] + (limits[i + 1] ? '&ndash;' + limits[i + 1] + '<br>' : '+');
+}
+
+return div;
+};
+
+legend.addTo(myMap);
