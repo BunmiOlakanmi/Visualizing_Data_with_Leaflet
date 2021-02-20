@@ -18,23 +18,6 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson";
 
 d3.json(queryUrl, function(data) {
-//   // Once we get a response, send the data.features object to the createFeatures function
-//   // createFeatures(data.features);
-//   console.log(data);
-//   // console.log(data.features[0].geometry.coordinates[0]);
-//   var lat =[];
-//   var lon=[];
-//   var depth=[];
-//   var Place =[];
-//   var location =[];
-//   for (var i = 0; i < data.features.length; i++) {
-//     lat.push(data.features[i].geometry.coordinates[0]);
-//     lon.push(data.features[i].geometry.coordinates[1]);
-//     depth.push(data.features[i].geometry.coordinates[2]);
-//     Place.push(data.features[i].properties.place);
-//     location.push([lat, lon]);
-   
-//   }
   
   L.geoJson(data, {
     onEachfeature:function(feature, layer){
@@ -55,6 +38,7 @@ function styleInfo(feature) {
   };
 }
 
+//Assign color to the circles using the depth of the earthquake
 function getColor(depth) {
   switch (true) {
   case depth > 90:
@@ -72,6 +56,7 @@ function getColor(depth) {
   }
 }
 
+// determine radius of the circle using the magnitude of the earthquake
 function getRadius(magnitude) {
   if (magnitude === 0) {
     return 1;
@@ -103,14 +88,16 @@ L.geoJson(data, {
 
 });
 
+// Build legend for the geomap
 var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function () {
 
     var div = L.DomUtil.create('div', 'info legend'),
+    // create limits for the legend labels
     limits = [0, 10, 30, 50, 70, 90],
+    //get range of colors from the function getColor
     colors= getColor(limits);
-    // var colors = ["#d4ee00", "#eecc00", "#ee9c00", "#ea822c", "#ea2c2c"];
     labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
