@@ -17,6 +17,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson";
 
+// Bind popups to every earthquake location on the map
 d3.json(queryUrl, function(data) {
   
   L.geoJson(data, {
@@ -26,6 +27,7 @@ d3.json(queryUrl, function(data) {
   }).addTo(myMap);
 });
 
+// Style the circle on each earthquake spot on the map
 function styleInfo(feature) {
   return {
     opacity: 1,
@@ -95,7 +97,7 @@ legend.onAdd = function () {
 
     var div = L.DomUtil.create('div', 'info legend'),
     // create limits for the legend labels
-    limits = [0, 10, 30, 50, 70, 90],
+    limits = [-10, 10, 30, 50, 70, 90],
     //get range of colors from the function getColor
     colors= getColor(limits);
     labels = [];
