@@ -15,7 +15,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // get earthquake data
 
-var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson";
+var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
 
 // Bind popups to every earthquake location on the map
 d3.json(queryUrl, function(data) {
@@ -113,3 +113,9 @@ return div;
 };
 
 legend.addTo(myMap);
+
+secondURl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
+
+d3.json(secondURl, function(Data) {
+  console.log(Data)
+});
