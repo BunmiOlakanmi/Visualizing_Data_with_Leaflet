@@ -37,9 +37,9 @@ To run this project,
 
 ### Files
 1. The images folder contains some of the images used in this read me file.
-2. index.html file is used to render the map on a web browser.
+2. `index.html` file is used to render the map on a web browser.
 3. The static folder contains css and js folders.
-4. The css folder contains style.css that styles our index.html page.
-5. The js folder contains logic.js and config.js files.
-6. config.js contains the API key for mapbox.
-7. logic.js contains the JavaScript file that drives the visualization on index.html page.
+4. The css folder contains `style.css` that styles our `index.html` page.
+5. The js folder contains `logic.js` and `config.js` files.
+6. `config.js` contains the API key for mapbox.
+7. `logic.js` contains the JavaScript file that drives the visualization on index.html page.
