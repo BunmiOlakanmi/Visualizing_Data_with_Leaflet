@@ -14,7 +14,7 @@ The purpose of this project is to visualize the earthquake data by the United St
 4. Visual Studio Code
 
 ### Instructions
-The main task here is to visualize the earthquake dataset, which entailed getting the dataset in JSON format from the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page and pick a data set to visualize
+The main task here is to visualize the earthquake dataset, which entailed getting the dataset in JSON format from the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). I chose to visualize the earthquake data from the past seven day, with earthquakes of magnitude 4.5 and above. See data [here] (https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson)  page and pick a data set to visualize
 
 
 ## Task
