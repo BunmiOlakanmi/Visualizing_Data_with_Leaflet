@@ -21,8 +21,6 @@ The purpose of this project is to visualize the earthquake data by the United St
 
    * Data markers reflect the magnitude of the earthquake by their size and and depth of the earth quake by color. Earthquakes with higher magnitudes appear larger and earthquakes with greater depth appear darker in color.
 
-   * **HINT** the depth of the earth can be found as the third coordinate for each earthquake.
-
    * There are popups that provide additional information about the earthquake when a marker is clicked.
 
    * Also, there is a legend that provides context for the map data.
