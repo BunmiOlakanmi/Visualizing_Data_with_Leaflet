@@ -1,12 +1,20 @@
-# Leaflet Homework - Visualizing Data with Leaflet
+# Visualizing Data with Leaflet
 
-## Background
+## Description
 
 ![1-Logo](Images/1-Logo.png)
 
-Welcome to the United States Geological Survey, or USGS for short! The USGS is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. As a new hire, you will be helping them out with an exciting new project!
+The purpose of this project is to visualize the earthquake data by the United States Geological Survey, or USGS for short. Hopefully, being able to visualize their data will allow them to better educate the public and other government organizations (and hopefully secure more funding..) on issues facing our planet.
 
-The USGS is interested in building a new set of tools that will allow them visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. Their hope is that being able to visualize their data will allow them to better educate the public and other government organizations (and hopefully secure more funding..) on issues facing our planet.
+### Tools
+1. JavaScript libraries:
+   -  Leaflet
+2. HTML
+3. CSS
+4. Visual Studio Code
+
+### Instructions
+The first task here is to visualize the earthquake dataset
 
 
 ## Task
