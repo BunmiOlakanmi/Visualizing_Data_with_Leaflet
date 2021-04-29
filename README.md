@@ -1,4 +1,4 @@
-# Visualizing Data with Leaflet
+# Visualizing USGS Earthquake Data 
 
 ## Description
 
