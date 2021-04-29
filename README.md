@@ -14,8 +14,24 @@ The purpose of this project is to visualize the earthquake data by the United St
 4. Visual Studio Code
 
 ### Instructions
-The main task here is to visualize the earthquake dataset, which entailed getting the dataset in GeoJSON format from the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). I chose to visualize the earthquake data from the past seven day, with earthquakes of magnitude 4.5 and above. See data at (https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson).
+1. The main task here is to visualize the earthquake dataset, which entailed getting the dataset in GeoJSON format from the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). I chose to visualize the earthquake data from the past seven days, with earthquakes of magnitude 4.5 and above. See data at (https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson).
    ![3-Data](Images/3-Data.png)
+   
+2.   Next, is to create a map using Leaflet that plots all of the earthquakes from the data set based on their longitude and latitude.
+
+   * Data markers reflect the magnitude of the earthquake by their size and and depth of the earth quake by color. Earthquakes with higher magnitudes appear larger and earthquakes with greater depth appear darker in color.
+
+   * **HINT** the depth of the earth can be found as the third coordinate for each earthquake.
+
+   * There are popups that provide additional information about the earthquake when a marker is clicked.
+
+   * Also, there is a legend that provides context for the map data.
+
+   * The visualization looks something like the map above.
+
+![Output-map](https://user-images.githubusercontent.com/71471355/116595697-cff4ce00-a8e0-11eb-8d34-10110f46e224.jpg)
+
+
 
 
 ## Task
