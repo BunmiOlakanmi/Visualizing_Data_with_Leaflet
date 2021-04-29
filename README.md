@@ -27,39 +27,20 @@ The purpose of this project is to visualize the earthquake data by the United St
 
    * Also, there is a legend that provides context for the map data.
 
-   * The visualization looks something like the map above.
+   * The visualization looks something like the map below.
 
 ![Output-map](https://user-images.githubusercontent.com/71471355/116595697-cff4ce00-a8e0-11eb-8d34-10110f46e224.jpg)
 
+### Steps
+To run this project,
+1. Open all the files with a visual studio code or any debugging environment.
+2. Run the the index.html file with a live server, or simply run http://127.0.0.1:5501/index.html on your preferred web browser. This loads up the map on a web browser, and you can visualize the earthquake data.
 
-
-
-## Task
-
-### Level 1: Basic Visualization
-
-![2-BasicMap](Images/2-BasicMap.png)
-
-My first task is to visualize an earthquake data set.
-
-1. **Get your data set**
-
-
-
-   The USGS provides earthquake data in a number of different formats, updated every 5 minutes. Visit the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page and pick a data set to visualize. When you click on a data set, for example 'All Earthquakes from the Past 7 Days', you will be given a JSON representation of that data. You will be using the URL of this JSON to pull in the data for our visualization.
-
-   ![4-JSON](Images/4-JSON.png)
-
-2. **Import & Visualize the Data**
-
-   Create a map using Leaflet that plots all of the earthquakes from your data set based on their longitude and latitude.
-
-   * Your data markers should reflect the magnitude of the earthquake by their size and and depth of the earth quake by color. Earthquakes with higher magnitudes should appear larger and earthquakes with greater depth should appear darker in color.
-
-   * **HINT** the depth of the earth can be found as the third coordinate for each earthquake.
-
-   * Include popups that provide additional information about the earthquake when a marker is clicked.
-
-   * Create a legend that will provide context for your map data.
-
-   * Your visualization should look something like the map above.
+### Files
+1. The images folder contains some of the images used in this read me file.
+2. index.html file is used to render the map on a web browser.
+3. The static folder contains css and js folders.
+4. The css folder contains style.css that styles our index.html page.
+5. The js folder contains logic.js and config.js files.
+6. config.js contains the API key for mapbox.
+7. logic.js contains the JavaScript file that drives the visualization on index.html page.
