@@ -29,6 +29,8 @@ The purpose of this project is to visualize the earthquake data by the United St
 
    * The visualization looks something like the map below.
 
+
+
 ![Output-map](https://user-images.githubusercontent.com/71471355/116595697-cff4ce00-a8e0-11eb-8d34-10110f46e224.jpg)
 
 ### Steps
